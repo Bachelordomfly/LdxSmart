@@ -7,22 +7,6 @@ from model.pages.getCargo_page import getCargo
 from selenium.webdriver.support import expected_conditions as EC
 from model.common import log
 from model.pages.inputBill_page import subInput
-from model.pages.inputCheck_page import check
-
-'''
-project:
-日本单自动选择配送服务检查
-前提:收件国家地区为日本
-产品默认配送服务为黑猫宅急便：不修改配送服务
-产品默认配送服务非黑猫宅急便：
-    航空服务：
-        东京方向 ：是佐川超标货，则改为西浓混载，不是则佐川
-        大阪方向 ：是黑猫超标货，则改为西浓混载，不是则YGX
-        其他或无 ：超标货检查
-佐川超标件：三边之和大于250cm或单件超过45KG或货物类型为其它
-
-黑猫超标件：单件超过25KG或存在某一件三边之和大于160cm或货物类型为其它
-'''
 
 class input_order(unittest.TestCase):
 
@@ -39,11 +23,10 @@ class input_order(unittest.TestCase):
         self.gc = getCargo()
         self.waybillNo = u''
         self.inputBill = subInput()
-        self.inputCheck = check()
         self.mylog = log.log()
 
     def Login(self):
-        # 使用深圳站点用户登陆
+        # 使用上海站点用户登陆
         try:
             self.driver.get(self.url)
             self.driver.maximize_window()

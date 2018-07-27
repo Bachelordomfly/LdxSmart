@@ -11,15 +11,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class getCargo():
     # 定位器
-    # menu1_loc = (By.LINK_TEXT, '收货')
-    # menu1_loc = (By.XPATH, 'html/body/div[1]/div[1]/div/div[2]/ul/li[4]/a')
-    # menu2_loc = (By.XPATH, 'html/body/div[1]/div[3]/div[1]/div/ul/li[9]/a')
-    # customerName_loc = (By.ID, 'fba0128d-2891-4ae9-9a94-af626174983c')
     customerCode_loc = (By.ID, 'be9c632f-c631-4987-8d6b-0470100349e1')
     customerName_loc = (By.XPATH, '//*[@id="fba0128d-2891-4ae9-9a94-af626174983c"]')
-    # customerCode_loc = (By.XPATH, '//*[@id="be9c632f-c631-4987-8d6b-0470100349e1"]')
-    # customerCode_loc = (By.CSS_SELECTOR, '#be9c632f-c631-4987-8d6b-0470100349e1')
-    customerTip_loc = (By.XPATH,'html/body/div[3]/ul/li[1]')
+    customerTip_loc = (By.XPATH, 'html/body/div[3]/ul/li[1]')
     product_loc = (By.ID, '26fb2293-6d35-4e00-8cdd-68d9a37655c7')
     cargoType_loc = (By.ID, '29868025-9473-411a-b1a1-af2614ab6c96')
     waybillNo_loc = (By.ID, 'a33a890d-5626-4379-83c1-bb622f24e757')
@@ -32,6 +26,7 @@ class getCargo():
     flightService_loc = (By.ID, '0ca0917a-d1bf-4e49-b7c0-7224f60081f5')
     menu1_loc = (By.PARTIAL_LINK_TEXT, '收货段')
     menu2_loc = (By.LINK_TEXT, '收货')
+    table_loc = (By.ID, '07f19511-22e8-4579-824f-ec06d98ad514-non-body')
 
     #   打开页面
     def enter(self, driver):
@@ -116,6 +111,7 @@ class getCargo():
     #   输入件数回车
     def pieces_enter(self, driver, pieces):
         try:
+            driver.find_element(*self.pieces_loc).clear()
             driver.find_element(*self.pieces_loc).send_keys(pieces)
         except Exception as e:
             print e
@@ -186,6 +182,19 @@ class getCargo():
             return False
         else:
             return True
+
+    def get_table_row(self, driver):
+        try:
+            # 按行查询表格的数据，取出的数据是一整行，按空格分隔每一列的数据
+            table_tr_list = driver.find_element(*self.table_loc).find_elements(By.TAG_NAME, "tr")
+            time.sleep(3)
+            t = 0
+            for tr in table_tr_list:
+                t += 1
+            return t
+        except Exception as e:
+            print e
+        time.sleep(3)
 
 
 
