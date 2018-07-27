@@ -40,8 +40,8 @@ class taiwan(unittest.TestCase):
         self.taiwan_page.cus_name_enter(self.driver, self.cusName)
         self.taiwan_page.cus_code_enter(self.driver, self.cusCode)
         self.taiwan_page.template_select(self.driver, u'台湾线预录单（尺寸）')
+        self.taiwan_page.excel_creat()
         self.taiwan_page.file_upload(self.driver, 'new_TWtest.xls')
-        time.sleep(3)
 
     def tearDown(self):
         self.driver.close()

@@ -1,12 +1,10 @@
 # coding:utf-8
 from selenium.webdriver.common.by import By
-from model.common.base_page import BasePage
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import time
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support import select
-
+import xlrd
+from xlutils.copy import copy
 
 class taiwan_page():
 
@@ -63,3 +61,22 @@ class taiwan_page():
             driver.find_element(*self.upload_loc).send_keys(file_loc)
         except Exception as e:
             print e
+        time.sleep(3)
+
+    #   生成excel文件
+    def excel_creat(self):
+        try:
+            old_excel = xlrd.open_workbook('TWtest3.xls', formatting_info=True)  # 只能用于xls格式
+            new_excel = copy(old_excel)
+            ws = new_excel.get_sheet(0)
+            bill = time.strftime("%Y%m%d", time.localtime())
+            line = 1
+            for num in range(100, 105):
+                waybill = bill + str(num)
+                ws.write(line, 0, waybill)
+                ws.write(line, 1, waybill)
+                line += 1
+            new_excel.save('new_TWtest.xls')
+        except Exception as e:
+            print e
+        time.sleep(3)
