@@ -74,7 +74,7 @@ class szpackage(object):
         time.sleep(3)
 
     def subWaybill_input(self, driver, waybill):
-        client = MongoClient('192.168.1.168', 27017, connect=False)
+        client = MongoClient('192.168.1.79', 27017, connect=False)
         db = client.LdxSmart
         collection = db.packageItem
         package_item_detail = db.packageItemDetail

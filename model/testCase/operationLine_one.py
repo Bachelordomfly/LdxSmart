@@ -254,7 +254,7 @@ class operateOne(unittest.TestCase):
         #   进入深圳打包页面对该单进行打包
         self.szpackage.enter(self.driver)
         self.szpackage.mawb_enter(self.driver, self.mawbNo)
-        self.szpackage.flight_select(self.driver, u'NH8515')
+        self.szpackage.flight_select(self.driver, u'NH8518')
         self.szpackage.automatic_bag_select(self.driver)
         self.szpackage.subWaybill_input(self.driver, self.waybillNo)
         # self.szpackage.waybill_input(self.driver, self.waybillNo)

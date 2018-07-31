@@ -75,10 +75,10 @@ class input_order(unittest.TestCase):
             self.mylog.info(u'收货未保存成功,测试停止')
             self.driver.quit()
         else:
-
-            if self.inputBill.delivery_is_error(zipcode, self.waybillNo) == 0:
+            delivery_is_error = self.inputBill.delivery_is_error(zipcode, self.waybillNo)
+            if delivery_is_error == 0:
                 self.mylog.info(self.waybillNo + u'分拣码获取错误')
-            elif self.inputBill.delivery_is_error(zipcode, self.waybillNo) == 1:
+            elif delivery_is_error == 1:
                 self.mylog.info(self.waybillNo + u'分拣码获取正确')
             else:
                 self.mylog.info(self.waybillNo + u'台湾分拣码不做校验')

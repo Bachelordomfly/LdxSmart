@@ -30,7 +30,7 @@ class sort(object):
 
     #   判断配送服务是否正确
     def service_is_correct(self, waybill):
-        client = MongoClient('192.168.1.168', 27017, connect=False)
+        client = MongoClient('192.168.1.79', 27017, connect=False)
         db = client.LdxSmart
         collection = db.packageItem
         account_info = db.accountInfo

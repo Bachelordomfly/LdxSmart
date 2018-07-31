@@ -118,7 +118,7 @@ class subInput(object):
     '''
     # 判断配送服务是否正确
     def service_is_correct(self, waybill):
-        client = MongoClient('192.168.1.168', 27017, connect=False)
+        client = MongoClient('192.168.1.79', 27017, connect=False)
         db = client.LdxSmart
         collection = db.packageItem
         account_info = db.accountInfo
@@ -227,7 +227,7 @@ class subInput(object):
     '''
     # 检查输单后的分拣码是否正确
     def delivery_is_error(self, zipcode, waybillNo):
-        client = MongoClient('192.168.1.168', 27017, connect=False)  # 防止出现no servers found yet错误
+        client = MongoClient('192.168.1.79', 27017, connect=False)  # 防止出现no servers found yet错误
         db = client.LdxSmart
         package_item = db.packageItem
         account_info = db.accountInfo
@@ -241,7 +241,11 @@ class subInput(object):
         waybill_id = package_item.find_one({'waybill_no': waybillNo})['_id']
         distribution_service = account_info.find_one({'waybill_id': waybill_id})['distribution_service']
         vendor_id = service_item.find_one({'_id': distribution_service})['vendor_id']
-        delivery_code = delivery_info.find_one({'vendor_id': vendor_id, 'zipcode': zipcode})['delivery_code']
+        try:
+            delivery_code = u''
+            delivery_code = delivery_info.find_one({'vendor_id': vendor_id, 'zipcode': zipcode})['delivery_code']
+        except Exception as e:
+            print e
 
         # 如果供应商为YGX,则分拣码取后五位
         vendor_name = vendor.find_one({'_id': vendor_id})['name']

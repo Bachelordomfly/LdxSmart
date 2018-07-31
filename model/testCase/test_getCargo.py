@@ -61,8 +61,6 @@ class get_cargo(unittest.TestCase):
         #   自动复制最后一行的重量、长、宽、高
         self.Login()
 
-
-
     def tearDown(self):
         self.driver.close()
 
