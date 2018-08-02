@@ -6,8 +6,7 @@ import time
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support import select
 from selenium.webdriver.support.wait import WebDriverWait
-
-
+from pymongo import MongoClient
 
 class getCargo():
     # 定位器
@@ -28,6 +27,14 @@ class getCargo():
     menu2_loc = (By.LINK_TEXT, '收货')
     table_loc = (By.ID, '07f19511-22e8-4579-824f-ec06d98ad514-non-body')
 
+    def __init__(self):
+        self.client = MongoClient('192.168.1.79', 27017, connect=False)  # 防止出现no servers found yet错误
+        db = self.client.LdxSmart
+        self.packageItem = db.packageItem
+        self.productInfo = db.productInfo
+        self.productCustomer = db.productCustomer
+        self.freightInfo = db.freightInfo
+
     #   打开页面
     def enter(self, driver):
         try:
@@ -44,6 +51,7 @@ class getCargo():
     #   输入客户代码回车
     def cus_code_enter(self, driver, cus_code):
         try:
+            driver.find_element(*self.customerCode_loc).clear()
             driver.find_element(*self.customerCode_loc).send_keys(cus_code)
             time.sleep(2)
         except Exception as e:
@@ -54,6 +62,7 @@ class getCargo():
     #   输入客户名称回车
     def cus_name_enter(self, driver, cus_name):
         try:
+            driver.find_element(*self.customerName_loc).clear()
             driver.find_element(*self.customerName_loc).send_keys(cus_name)
         except Exception as ms:
             print ms
@@ -143,6 +152,14 @@ class getCargo():
             print e
         time.sleep(2)
 
+    #   判断单号输入框是否为空
+    def waybill_is_null(self, driver):
+        value = driver.find_element(*self.waybillNo_loc).get_attribute('value')
+        if value.strip():
+            return True
+        else:
+            return False
+
     #   判断客户名称是否为空
     def name_is_null(self, driver):
         value = driver.find_element(*self.customerName_loc).get_attribute('value')
@@ -183,6 +200,7 @@ class getCargo():
         else:
             return True
 
+    #   获取列表行数
     def get_table_row(self, driver):
         try:
             # 按行查询表格的数据，取出的数据是一整行，按空格分隔每一列的数据
@@ -195,6 +213,11 @@ class getCargo():
         except Exception as e:
             print e
         time.sleep(3)
+
+    #   计算运费
+    # def freight_caculate(self, driver, waybill):
+        # 获取产品客户关联
+
 
 
 

@@ -40,8 +40,8 @@ class get_cargo(unittest.TestCase):
         self.login_page.click_submit()
         time.sleep(3)
 
+    #   件数回车自动生成子单号输入框检查
     def test_auto_pieces(self):
-        #   件数回车自动生成子单号输入框检查
         self.Login()
         self.cargo_page.enter(self.driver)
         pieces = random.randint(0, 300)
@@ -57,9 +57,14 @@ class get_cargo(unittest.TestCase):
             else:
                 self.mylog.error(u'pieces'+pieces+u'回车异常' + self.driver.current_url)
 
+    # 自动复制最后一行的重量、长、宽、高功能检查
     def test_copy_attribute(self):
-        #   自动复制最后一行的重量、长、宽、高
         self.Login()
+
+    #   运费计算检查
+    def test_freight_caculate(self):
+        self.Login()
+
 
     def tearDown(self):
         self.driver.close()

@@ -23,6 +23,7 @@ class subInput(object):
     customerCode_loc = (By.ID, '584fcce3-a6fd-4eeb-b27e-9a95c0ddf35d')     # 客户代码
     customerName_loc = (By.ID, '87f8dc80-fe3e-4240-9f3d-3845b3872ca4')     # 客户名称
     receiverCountry_loc = (By.ID, '12a3f4fe-5292-408a-a0be-47b7e97fd852')  # 收件国家地区
+    product_loc = (By.ID, '8a8e5a2b-6fa8-457b-b2cb-5a8b10e71a7f')          # 产品
 
     # 打开页面
     def enter(self, driver):
@@ -46,6 +47,14 @@ class subInput(object):
         except Exception as e:
             print e
         time.sleep(2)
+
+    # 选择产品
+    def product_select(self, driver, product):
+        try:
+            select.Select(driver.find_element(*self.product_loc)).select_by_visible_text(product)
+        except Exception as e:
+            print e
+        time.sleep(1)
 
     # 输入发件人电话,回车
     def sender_tel_enter(self, driver, tel):
@@ -102,6 +111,15 @@ class subInput(object):
         except Exception as e:
             print e
         time.sleep(1)
+
+    #   判断单号输入框是否为空
+    def waybill_is_null(self, driver):
+        value = driver.find_element(*self.waybill_loc).get_attribute('value')
+        if value.strip():
+            return True
+        else:
+            return False
+
     '''
     project:
     日本单自动选择配送服务检查

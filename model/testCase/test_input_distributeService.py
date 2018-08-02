@@ -38,7 +38,6 @@ class input_distributeService(unittest.TestCase):
         self.cusName = u'HQ082_name'
         self.mylog = log.log()
         self.gc = getCargo()
-        self.waybillNo = u''
         self.inputBill = subInput()
         self.inputCheck = check()
         self.mylog = log.log()
@@ -58,7 +57,7 @@ class input_distributeService(unittest.TestCase):
         self.login_page.click_submit()
         time.sleep(3)
 
-    def Cargo(self, product):
+    def Cargo(self, product, waybill):
         #   进入收货页面收货(一票一件), 单号取当日时间
         self.waybillNo = time.strftime("%Y%m%d%H%M%S", time.localtime())
         # customer_name = "S-SHAPER CO LTD"
@@ -82,12 +81,12 @@ class input_distributeService(unittest.TestCase):
         else:
             print u'收货成功'
 
-    def InputBill(self, zipcode):
+    def InputBill(self, zipcode, waybill, product):
         #   进入输单页面完成输单
         sender_tel = "18146615611"
         receiver_tel = "13162558525"
-        self.inputBill.enter(self.driver)
-        self.inputBill.waybill_enter(self.driver, self.waybillNo)
+        self.inputBill.waybill_enter(self.driver, waybill)
+        self.inputBill.product_select(self.driver, product)
         self.inputBill.sender_tel_enter(self.driver, sender_tel)
         self.inputBill.receiver_tel_enter(self.driver, receiver_tel)
         self.inputBill.zipcode_enter(self.driver, zipcode)
@@ -97,15 +96,15 @@ class input_distributeService(unittest.TestCase):
             self.mylog.info(u'收货未保存成功,测试停止')
             self.driver.quit()
         else:
-            if self.service_is_correct(self.waybillNo):
-                print self.waybillNo+u'输单配送服务选择正确'
-                self.mylog.info(self.waybillNo+u'输单配送服务选择正确')
+            if self.service_is_correct(waybill):
+                print waybill+u'输单配送服务选择正确'
+                self.mylog.info(waybill+u'输单配送服务选择正确')
             else:
-                print self.waybillNo+u'输单配送服务选择错误'
-                self.mylog.info(self.waybillNo+u'输单配送服务选择错误')
+                print waybill+u'输单配送服务选择错误'
+                self.mylog.info(waybill+u'输单配送服务选择错误')
 
     def service_is_correct(self, waybill):
-        client = MongoClient('192.168.1.168', 27017, connect=False)
+        client = MongoClient('192.168.1.79', 27017, connect=False)
         db = client.LdxSmart
         collection = db.packageItem
         account_info = db.accountInfo
@@ -202,13 +201,26 @@ class input_distributeService(unittest.TestCase):
 
     def test01(self):
         self.Login()
+        # 进入收货页操作
+        self.gc.enter(self.driver)
+        waybill = []
+        num = 0
+        for i in range(0, 10):
+            bill = time.strftime("%Y%m%d%H%M%S", time.localtime())
+            waybill.append(bill)
+            product = "日本今发明至"
+            self.Cargo(product, bill)
+            while self.gc.waybill_is_null(self.driver):
+                time.sleep(1)
+
+        # 进入输单页操作
+        self.inputBill.enter(self.driver)
         product = ["日本今发明至", "日本今发后至商业件"]
         for p in product:
             zipcode = ["0700000", "0900000", "6000000", "8000000", "0500000"]
-            for i in zipcode:
-                self.Cargo(p)
-                self.InputBill(i)
-                self.LoginAgain(self.name, self.passwd)
+            for i in range(0, len(zipcode)):
+                self.InputBill(zipcode[i], waybill[num], p)
+                num += 1
 
     def tearDown(self):
         self.driver.close()

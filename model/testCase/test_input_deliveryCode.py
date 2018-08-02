@@ -33,7 +33,6 @@ class input_deliveryCode(unittest.TestCase):
         self.cusName = u'HQ082_name'
         self.mylog = log.log()
         self.gc = getCargo()
-        self.waybillNo = u''
         self.inputBill = subInput()
         self.mylog = log.log()
 
@@ -52,15 +51,13 @@ class input_deliveryCode(unittest.TestCase):
         self.login_page.click_submit()
         time.sleep(3)
 
-    def Cargo(self, product):
+    def Cargo(self, product, waybill):
         #   进入收货页面收货(一票一件), 单号取当日时间
-        self.waybillNo = time.strftime("%Y%m%d%H%M%S", time.localtime())
         cargo = "文件"
         weight = "2"
-        self.gc.enter(self.driver)
         self.gc.cus_name_enter(self.driver, self.cusName)
         self.gc.cus_code_enter(self.driver, self.cusCode)
-        self.gc.waybillNo_enter(self.driver, self.waybillNo)
+        self.gc.waybillNo_enter(self.driver, waybill)
         self.gc.product_select(self.driver, product)
         self.gc.cargotype_select(self.driver, cargo)
         self.gc.weight_write(self.driver, weight)
@@ -73,12 +70,12 @@ class input_deliveryCode(unittest.TestCase):
             self.mylog.info(u'收货成功')
             print u'收货成功'
 
-    def InputBill(self, zipcode):
+    def InputBill(self, zipcode, waybill, product):
         #   进入输单页面完成输单
         sender_tel = "18146615611"
         receiver_tel = "13162558525"
-        self.inputBill.enter(self.driver)
-        self.inputBill.waybill_enter(self.driver, self.waybillNo)
+        self.inputBill.waybill_enter(self.driver, waybill)
+        self.inputBill.product_select(self.driver, product)
         self.inputBill.sender_tel_enter(self.driver, sender_tel)
         self.inputBill.receiver_tel_enter(self.driver, receiver_tel)
         self.inputBill.zipcode_enter(self.driver, zipcode)
@@ -88,14 +85,15 @@ class input_deliveryCode(unittest.TestCase):
             self.mylog.info(u'输单未保存成功')
             self.driver.quit()
         else:
-            if self.delivery_is_error(zipcode) == 0:
-                self.mylog.info(self.waybillNo+u'分拣码获取错误')
+            delivery_is_error = self.inputBill.delivery_is_error(zipcode, waybill)
+            if delivery_is_error == 0:
+                self.mylog.info(waybill+u'分拣码获取错误')
                 print u'分拣码获取错误'
-            if self.delivery_is_error(zipcode) == 1:
-                self.mylog.info(self.waybillNo+u'分拣码获取正确')
+            if delivery_is_error == 1:
+                self.mylog.info(waybill+u'分拣码获取正确')
                 print u'分拣码获取正确'
             else:
-                self.mylog.info(self.waybillNo+u'台湾分拣码不做校验')
+                self.mylog.info(waybill+u'台湾分拣码不做校验')
                 print u'台湾分拣码不做校验'
 
     #   检查输单后的分拣码是否正确
@@ -114,7 +112,11 @@ class input_deliveryCode(unittest.TestCase):
         waybill_id = package_item.find_one({'waybill_no': self.waybillNo})['_id']
         distribution_service = account_info.find_one({'waybill_id': waybill_id})['distribution_service']
         vendor_id = service_item.find_one({'_id': distribution_service})['vendor_id']
-        delivery_code = delivery_info.find_one({'vendor_id': vendor_id, 'zipcode': zipcode})['delivery_code']
+        delivery_code = u''
+        try:
+            delivery_code = delivery_info.find_one({'vendor_id': vendor_id, 'zipcode': zipcode})['delivery_code']
+        except Exception as e:
+            print e
 
         # 如果供应商为YGX,则分拣码取后五位
         vendor_name = vendor.find_one({'_id': vendor_id})['name']
@@ -184,22 +186,38 @@ class input_deliveryCode(unittest.TestCase):
 
     def test01(self):
         self.Login()
+        # 进入收货页操作
+        self.gc.enter(self.driver)
+        waybill = []
+        num = 0
+        for i in range(0, 20):
+            bill = time.strftime("%Y%m%d%H%M%S", time.localtime())
+            waybill.append(bill)
+            product = "日本今发明至"
+            self.Cargo(product, bill)
+            while self.gc.waybill_is_null(self.driver):
+                time.sleep(1)
+
+        # 进入输单页操作
         # 日本线分拣码检查
+        self.inputBill.enter(self.driver)
         product1 = ["日本今发明至", "日本今发后至商业件"]
         for p in product1:
             zipcode = ["0700000", "0900000", "6000000", "8000000", "0500000"]
-            for i in zipcode:
-                self.Cargo(p)
-                self.InputBill(i)
-                self.LoginAgain(self.name, self.passwd)
+            for i in range(0, len(zipcode)):
+                self.InputBill(zipcode[i], waybill[num], p)
+                num += 1
+                while self.inputBill.waybill_is_null(self.driver):
+                    time.sleep(1)
         # 韩国线分拣码检查
         product2 = ["LDX韩国专线", "韩国海运"]
         for p in product2:
             zipcode = ["100021", "30101", "38615", "44692", "28156"]
-            for i in zipcode:
-                self.Cargo(p)
-                self.InputBill(i)
-                self.LoginAgain(self.name, self.passwd)
+            for i in range(0, len(zipcode)):
+                self.InputBill(zipcode[i], waybill[num], p)
+                num += 1
+                while self.inputBill.waybill_is_null(self.driver):
+                    time.sleep(1)
 
     def tearDown(self):
         self.driver.close()
