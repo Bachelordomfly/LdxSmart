@@ -11,10 +11,47 @@ db=client.LdxSmart
 #连接所用集合，也就是我们通常所说的表，packageItem为表名
 collection=db.packageItem
 
+ori = []
+des = []
+waybill = "20180720002"
+freightInfo = db.freightInfo
+account = db.accountInfo
+productCustomer = db.productCustomer
+
+customer_id = collection.find_one({'waybill_no': waybill})['customer_id']
+product_id = collection.find_one({'waybill_no': waybill})['product_id']
+product_customer_id = productCustomer.find_one({'product_id': product_id,
+                                                     'customer_id': customer_id})['_id']
+# print freightInfo.find_one({'productCustomer_id': product_customer_id})['des_weight']
+
+
+for all in freightInfo.find({'productCustomer_id': product_customer_id}):
+    # print all['des_weight']
+    des.append(all['des_weight'])
+    ori.append(all['ori_weight'])
+
+
+    for i in range(0, len(ori)):
+        try:
+            account_type = freightInfo.find_one({'productCustomer_id': product_customer_id,
+                                              'ori_weight': ori[i], 'des_weight': des[i], 'cargo_type': None
+                                              })['account_type']  # 结算类型
+            print account_type
+        except Exception as e:
+            print e
+
+print len(ori)
+# for all in collection.find({'customer_id': customer_id}, {'waybill_no': 1}):
+#     print all
+    # ori.append(ori_weight['ori_weight'])
+# for des_weight in freightInfo.find_one({'productCustomer_id': product_customer_id})['des_weight']:
+#     print des_weight
+#     des.append(des_weight)
+
 #接下里就可以用collection来完成对数据库表的一些操作
 
 #模糊查询集合中waybill_no含有20180416的waybill_no列
-# for all in collection.find({'waybill_no' : re.compile('20180416')}, {'waybill_no' : 1}):
+# for all in collection.find({'waybill_no' : re.compile('20180416')}, {'waybill_no': 1}):
 #     print all
 
 #获取集合中waybill_no=20180416015对应的state值

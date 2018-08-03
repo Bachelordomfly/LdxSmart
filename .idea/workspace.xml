@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="479bd650-9aec-4870-87a7-8e92b703f4ea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runCase/run_inputOrder.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/api.py" afterPath="$PROJECT_DIR$/data/api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/db.py" afterPath="$PROJECT_DIR$/data/db.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/mylog.log" afterPath="$PROJECT_DIR$/log/mylog.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/pages/inputBill_page.py" afterPath="$PROJECT_DIR$/model/pages/inputBill_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/pages/sorting_page.py" afterPath="$PROJECT_DIR$/model/pages/sorting_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/pages/szPacking_page.py" afterPath="$PROJECT_DIR$/model/pages/szPacking_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/testCase/operationLine_one.py" afterPath="$PROJECT_DIR$/model/testCase/operationLine_one.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/pages/getCargo_page.py" afterPath="$PROJECT_DIR$/model/pages/getCargo_page.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/testCase/test_getCargo.py" afterPath="$PROJECT_DIR$/model/testCase/test_getCargo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/testCase/test_inputOrder.py" afterPath="$PROJECT_DIR$/model/testCase/test_inputOrder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runCase/run_test.py" afterPath="$PROJECT_DIR$/runCase/run_test.py" />
     </list>
     <ignored path="LdxSmart.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,9 +29,9 @@
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_operateOne.coverage" NAME="Unittests in operateOne Coverage Results" MODIFIED="1533004033333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_test.coverage" NAME="Unittests in test Coverage Results" MODIFIED="1515577126093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_test_taiwan.coverage" NAME="Unittests in test_taiwan Coverage Results" MODIFIED="1530089584284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
-    <SUITE FILE_PATH="coverage/LdxSmart$api.coverage" NAME="api Coverage Results" MODIFIED="1523873347357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_taiwan.coverage" NAME="Unittests in taiwan Coverage Results" MODIFIED="1532673438691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittest_operateOne_test01.coverage" NAME="Unittest operateOne.test01 Coverage Results" MODIFIED="1533003593283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
+    <SUITE FILE_PATH="coverage/LdxSmart$api.coverage" NAME="api Coverage Results" MODIFIED="1533291481919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_operateOne__2_.coverage" NAME="Unittests in operateOne (2) Coverage Results" MODIFIED="1531896536276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_taiwan__1_.coverage" NAME="Unittests in taiwan (1) Coverage Results" MODIFIED="1532674746065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittest_TestTaiwan_test_login.coverage" NAME="Unittest TestTaiwan.test_login Coverage Results" MODIFIED="1530087092297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
@@ -46,11 +41,12 @@
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_TestGetCargo.coverage" NAME="Unittests in TestGetCargo Coverage Results" MODIFIED="1521105696374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_operateTwo__2_.coverage" NAME="Unittests in operateTwo (2) Coverage Results" MODIFIED="1532509733851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$subCompanyRun.coverage" NAME="subCompanyRun Coverage Results" MODIFIED="1523960785830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/runCase" />
-    <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_get_cargo.coverage" NAME="Unittests in get_cargo Coverage Results" MODIFIED="1532680490058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
+    <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_get_cargo.coverage" NAME="Unittests in get_cargo Coverage Results" MODIFIED="1533287757756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$run_inputOrder.coverage" NAME="run_inputOrder Coverage Results" MODIFIED="1533005392520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/runCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittest_TestLogin_test_login__1_.coverage" NAME="Unittest TestLogin.test_login (1) Coverage Results" MODIFIED="1521367512405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
-    <SUITE FILE_PATH="coverage/LdxSmart$db.coverage" NAME="db Coverage Results" MODIFIED="1528790104052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/LdxSmart$db.coverage" NAME="db Coverage Results" MODIFIED="1533288141418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_input_arlert.coverage" NAME="Unittests in input_arlert Coverage Results" MODIFIED="1532590362368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
+    <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_get_cargo__1_.coverage" NAME="Unittests in get_cargo (1) Coverage Results" MODIFIED="1533289604357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_TestLogin.coverage" NAME="Unittests in TestLogin Coverage Results" MODIFIED="1531207988793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$run_test.coverage" NAME="run_test Coverage Results" MODIFIED="1533004602507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/runCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_taiwan__2_.coverage" NAME="Unittests in taiwan (2) Coverage Results" MODIFIED="1532675913981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
@@ -64,8 +60,11 @@
     <SUITE FILE_PATH="coverage/LdxSmart$shgc_allweight.coverage" NAME="shgc_allweight Coverage Results" MODIFIED="1530091658991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_operateTwo__1_.coverage" NAME="Unittests in operateTwo (1) Coverage Results" MODIFIED="1532509146187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittest_test_test__1_.coverage" NAME="Unittest test.test (1) Coverage Results" MODIFIED="1530090606123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
+    <SUITE FILE_PATH="coverage/LdxSmart$Unittest_input_distributeService_test01.coverage" NAME="Unittest input_distributeService.test01 Coverage Results" MODIFIED="1533197485812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$subGetCargo.coverage" NAME="subGetCargo Coverage Results" MODIFIED="1521015169410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$reptile.coverage" NAME="reptile Coverage Results" MODIFIED="1532573939049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/LdxSmart$Unittest_input_deliveryCode_test01.coverage" NAME="Unittest input_deliveryCode.test01 Coverage Results" MODIFIED="1533194283117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
+    <SUITE FILE_PATH="coverage/LdxSmart$Unittest_get_cargo_test_freight_caculate.coverage" NAME="Unittest get_cargo.test_freight_caculate Coverage Results" MODIFIED="1533291220580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$globalparameter.coverage" NAME="globalparameter Coverage Results" MODIFIED="1521011997177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/LdxSmart$operationLine_one.coverage" NAME="operationLine_one Coverage Results" MODIFIED="1531213931863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
     <SUITE FILE_PATH="coverage/LdxSmart$Unittests_in_test_input_distributeService.coverage" NAME="Unittests in test_input_distributeService Coverage Results" MODIFIED="1532588935772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model/testCase" />
@@ -101,44 +100,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="szPacking_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/pages/szPacking_page.py">
+      <file leaf-file-name="test_getCargo.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/testCase/test_getCargo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sorting_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/pages/sorting_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inputBill_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/pages/inputBill_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3420">
-              <caret line="246" column="30" selection-start-line="246" selection-start-column="30" selection-end-line="246" selection-end-column="30" />
+            <state relative-caret-position="168">
+              <caret line="79" column="39" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
               <folding>
-                <element signature="e#3843#4150#1" expanded="false" />
+                <element signature="e#15#30#0" expanded="true" />
+                <element signature="e#840#1315#0" expanded="false" />
+                <element signature="e#1382#2097#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="review_page.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/pages/review_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -146,54 +117,43 @@
       <file leaf-file-name="getCargo_page.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/pages/getCargo_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1833">
-              <caret line="196" column="21" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_inputOrder.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/model/testCase/test_inputOrder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="81" column="60" selection-start-line="81" selection-start-column="60" selection-end-line="81" selection-end-column="60" />
+            <state relative-caret-position="141">
+              <caret line="143" column="8" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
               <folding>
-                <element signature="e#15#30#0" expanded="true" />
-                <element signature="e#875#1350#0" expanded="false" />
+                <element signature="e#15#58#0" expanded="true" />
+                <element signature="e#6872#7038#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="201807311052Report.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/report/201807311052Report.html">
+      <file leaf-file-name="db.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="157">
+              <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+              <folding>
+                <element signature="e#14#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_inputOrder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runCase/run_inputOrder.py">
+      <file leaf-file-name="api.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/api.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-              <folding>
-                <element signature="e#15#52#0" expanded="true" />
-                <marker date="1533005392000" expanded="true" signature="307:710" ph="..." />
-              </folding>
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="201807311042Report.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/report/201807311042Report.html">
+      <file leaf-file-name="mylog.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log/mylog.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="318">
+              <caret line="511" column="35" selection-start-line="511" selection-start-column="35" selection-end-line="511" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -214,7 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/model/testCase/shgc_allweightCalculate.py" />
         <option value="$PROJECT_DIR$/model/testCase/shgc_save.py" />
         <option value="$PROJECT_DIR$/model/test.py" />
         <option value="$PROJECT_DIR$/model/testCase/operationLine1.py" />
@@ -232,7 +191,6 @@
         <option value="$PROJECT_DIR$/model/pages/login_page.py" />
         <option value="$PROJECT_DIR$/model/testCase/subGetCargo.py" />
         <option value="$PROJECT_DIR$/model/testCase/shgc_cuscodeEnter.py" />
-        <option value="$PROJECT_DIR$/data/db.py" />
         <option value="$PROJECT_DIR$/model/pages/exportWeigh_page.py" />
         <option value="$PROJECT_DIR$/model/pages/inputCheck_page.py" />
         <option value="$PROJECT_DIR$/model/pages/review_page.py" />
@@ -249,22 +207,24 @@
         <option value="$PROJECT_DIR$/test_case/input_order/test_distributeService.py" />
         <option value="$PROJECT_DIR$/runCase/HTMLTestRunner.py" />
         <option value="$PROJECT_DIR$/report/201807261659Report.html" />
-        <option value="$PROJECT_DIR$/model/testCase/test_input_distributeService.py" />
         <option value="$PROJECT_DIR$/log/mylog.log" />
-        <option value="$PROJECT_DIR$/model/testCase/test_input_deliveryCode.py" />
         <option value="$PROJECT_DIR$/data/excel_deal.py" />
         <option value="$PROJECT_DIR$/model/testCase/operationLine_three.py" />
         <option value="$PROJECT_DIR$/model/pages/twinput_page.py" />
         <option value="$PROJECT_DIR$/model/testCase/test_taiwan.py" />
-        <option value="$PROJECT_DIR$/model/pages/getCargo_page.py" />
         <option value="$PROJECT_DIR$/model/pages/sorting_page.py" />
         <option value="$PROJECT_DIR$/model/pages/szPacking_page.py" />
         <option value="$PROJECT_DIR$/model/testCase/operationLine_one.py" />
-        <option value="$PROJECT_DIR$/model/testCase/test_getCargo.py" />
         <option value="$PROJECT_DIR$/runCase/run_test.py" />
         <option value="$PROJECT_DIR$/runCase/run_inputOrder.py" />
-        <option value="$PROJECT_DIR$/model/pages/inputBill_page.py" />
         <option value="$PROJECT_DIR$/model/testCase/test_inputOrder.py" />
+        <option value="$PROJECT_DIR$/model/pages/inputBill_page.py" />
+        <option value="$PROJECT_DIR$/model/testCase/test_input_deliveryCode.py" />
+        <option value="$PROJECT_DIR$/model/testCase/test_input_distributeService.py" />
+        <option value="$PROJECT_DIR$/data/db.py" />
+        <option value="$PROJECT_DIR$/model/pages/getCargo_page.py" />
+        <option value="$PROJECT_DIR$/model/testCase/test_getCargo.py" />
+        <option value="$PROJECT_DIR$/data/api.py" />
       </list>
     </option>
   </component>
@@ -304,7 +264,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -408,6 +367,20 @@
               <option name="myItemId" value="LdxSmart" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LdxSmart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LdxSmart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -425,6 +398,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -445,8 +419,26 @@
       <recent name="$PROJECT_DIR$/model/files" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest input_order.test_destribute_service">
-    <configuration default="false" name="Unittest operateOne.test01" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.api">
+    <configuration default="false" name="api" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LdxSmart" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest get_cargo.test_freight_caculate" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -457,9 +449,9 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="LdxSmart" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/testCase/operationLine_one.py" />
-      <option name="CLASS_NAME" value="operateOne" />
-      <option name="METHOD_NAME" value="test01" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/testCase/test_getCargo.py" />
+      <option name="CLASS_NAME" value="get_cargo" />
+      <option name="METHOD_NAME" value="test_freight_caculate" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -469,7 +461,7 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittests in operateOne" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in get_cargo" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -480,8 +472,8 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="LdxSmart" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/testCase/operationLine_one.py" />
-      <option name="CLASS_NAME" value="operateOne" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/testCase/test_getCargo.py" />
+      <option name="CLASS_NAME" value="get_cargo" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_CLASS" />
@@ -492,43 +484,25 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="run_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="db" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runCase" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="LdxSmart" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runCase/run_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/db.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="run_inputOrder" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/runCase" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="LdxSmart" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runCase/run_inputOrder.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittest input_order.test_destribute_service" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in get_cargo (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -539,11 +513,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="LdxSmart" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/testCase/test_inputOrder.py" />
-      <option name="CLASS_NAME" value="input_order" />
-      <option name="METHOD_NAME" value="test_destribute_service" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/testCase/test_getCargo.py" />
+      <option name="CLASS_NAME" value="get_cargo" />
+      <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -760,19 +734,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest operateOne.test01" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in operateOne" />
-      <item index="2" class="java.lang.String" itemvalue="Python.run_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.run_inputOrder" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest input_order.test_destribute_service" />
+      <item index="0" class="java.lang.String" itemvalue="Python.api" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest get_cargo.test_freight_caculate" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in get_cargo" />
+      <item index="3" class="java.lang.String" itemvalue="Python.db" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in get_cargo (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest input_order.test_destribute_service" />
-        <item index="1" class="java.lang.String" itemvalue="Python.run_inputOrder" />
-        <item index="2" class="java.lang.String" itemvalue="Python.run_test" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in operateOne" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest operateOne.test01" />
+        <item index="0" class="java.lang.String" itemvalue="Python.api" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest get_cargo.test_freight_caculate" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in get_cargo (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.db" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in get_cargo" />
       </list>
     </recent_temporary>
   </component>
@@ -793,35 +767,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_input_order_test_destribute_service - 2018.07.31 at 10h 56m 16s.xml">
-      <configuration name="Unittest input_order.test_destribute_service" configurationId="tests" />
+    <history-entry file="Unittest_get_cargo_test_freight_caculate - 2018.08.03 at 15h 54m 56s.xml">
+      <configuration name="Unittest get_cargo.test_freight_caculate" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_operateOne_test01 - 2018.07.31 at 10h 16m 40s.xml">
-      <configuration name="Unittest operateOne.test01" configurationId="tests" />
+    <history-entry file="Unittest_get_cargo_test_freight_caculate - 2018.08.03 at 18h 13m 03s.xml">
+      <configuration name="Unittest get_cargo.test_freight_caculate" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_operateOne_test01 - 2018.07.31 at 10h 23m 42s.xml">
-      <configuration name="Unittest operateOne.test01" configurationId="tests" />
+    <history-entry file="Unittest_get_cargo_test_freight_caculate - 2018.08.03 at 18h 16m 08s.xml">
+      <configuration name="Unittest get_cargo.test_freight_caculate" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_operateOne - 2018.07.31 at 10h 33m 03s.xml">
-      <configuration name="Unittests in operateOne" configurationId="tests" />
+    <history-entry file="Unittests_in_get_cargo - 2018.08.03 at 15h 48m 56s.xml">
+      <configuration name="Unittests in get_cargo" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_taiwan_(1) - 2018.07.27 at 14h 27m 02s.xml">
-      <configuration name="Unittests in taiwan (1)" configurationId="tests" />
+    <history-entry file="Unittests_in_get_cargo - 2018.08.03 at 15h 56m 42s.xml">
+      <configuration name="Unittests in get_cargo" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_taiwan_(1) - 2018.07.27 at 15h 00m 00s.xml">
-      <configuration name="Unittests in taiwan (1)" configurationId="tests" />
+    <history-entry file="Unittests_in_get_cargo - 2018.08.03 at 16h 51m 56s.xml">
+      <configuration name="Unittests in get_cargo" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_taiwan_(2) - 2018.07.27 at 14h 35m 35s.xml">
-      <configuration name="Unittests in taiwan (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_get_cargo - 2018.08.03 at 16h 54m 36s.xml">
+      <configuration name="Unittests in get_cargo" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_taiwan_(2) - 2018.07.27 at 15h 20m 29s.xml">
-      <configuration name="Unittests in taiwan (2)" configurationId="tests" />
+    <history-entry file="Unittests_in_get_cargo - 2018.08.03 at 17h 14m 52s.xml">
+      <configuration name="Unittests in get_cargo" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_taiwan_(3) - 2018.07.27 at 14h 37m 06s.xml">
-      <configuration name="Unittests in taiwan (3)" configurationId="tests" />
+    <history-entry file="Unittests_in_get_cargo - 2018.08.03 at 17h 21m 02s.xml">
+      <configuration name="Unittests in get_cargo" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_taiwan_(4) - 2018.07.27 at 14h 56m 54s.xml">
-      <configuration name="Unittests in taiwan (4)" configurationId="tests" />
+    <history-entry file="Unittests_in_get_cargo_(1) - 2018.08.03 at 17h 48m 33s.xml">
+      <configuration name="Unittests in get_cargo (1)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -837,7 +811,7 @@
     <frame x="0" y="23" width="1280" height="681" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21647818" sideWeight="0.49004975" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22617124" sideWeight="0.49004975" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30899832" sideWeight="0.509693" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -847,7 +821,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21324718" sideWeight="0.5099502" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33616298" sideWeight="0.49030694" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23429541" sideWeight="0.49030694" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -892,9 +866,54 @@
           <option name="timeStamp" value="293" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/model/pages/inputBill_page.py</url>
-          <line>229</line>
-          <option name="timeStamp" value="301" />
+          <url>file://$PROJECT_DIR$/model/pages/getCargo_page.py</url>
+          <line>224</line>
+          <option name="timeStamp" value="345" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/model/pages/getCargo_page.py</url>
+          <line>234</line>
+          <option name="timeStamp" value="346" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/model/pages/getCargo_page.py</url>
+          <line>237</line>
+          <option name="timeStamp" value="349" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/model/pages/getCargo_page.py</url>
+          <line>243</line>
+          <option name="timeStamp" value="350" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/model/pages/getCargo_page.py</url>
+          <line>256</line>
+          <option name="timeStamp" value="351" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/model/pages/getCargo_page.py</url>
+          <line>265</line>
+          <option name="timeStamp" value="352" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/model/pages/getCargo_page.py</url>
+          <line>279</line>
+          <option name="timeStamp" value="353" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/model/testCase/test_getCargo.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="354" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/model/testCase/test_getCargo.py</url>
+          <line>72</line>
+          <option name="timeStamp" value="356" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/data/api.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="357" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -904,20 +923,12 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="305" />
+      <option name="time" value="358" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/model/testCase/subGetCargo.py" />
     <entry file="file://$PROJECT_DIR$/model/testCase/shgc_allweight.py" />
-    <entry file="file://$PROJECT_DIR$/data/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/pages/exportWeigh_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -943,13 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1002,7 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="2709" column="8" selection-start-line="2709" selection-start-column="8" selection-end-line="2709" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,7 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,7 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-192">
           <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1043,13 +1044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/log/mylog.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="384" column="0" selection-start-line="384" selection-start-column="0" selection-end-line="384" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/testCase/test_input_alert.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -1061,7 +1055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-135">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1090,7 +1083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,13 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/testCase/test_input_deliveryCode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/pages/inputCheck_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-417">
@@ -1129,37 +1114,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/testCase/test_input_distributeService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/testCase/test_getCargo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#30#0" expanded="false" />
-            <element signature="e#840#1315#0" expanded="false" />
-            <element signature="e#1357#2095#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/testCase/operationLine_one.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="259" column="67" selection-start-line="259" selection-start-column="67" selection-end-line="259" selection-end-column="67" />
-          <folding>
-            <element signature="e#1823#2298#0" expanded="false" />
-            <element signature="e#7421#8376#0" expanded="false" />
-            <element signature="e#8426#8498#0" expanded="false" />
-            <element signature="e#8535#8922#0" expanded="false" />
-            <element signature="e#9914#10064#0" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/testCase/test_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runCase/run_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report/201807311052Report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runCase/run_inputOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report/201807311042Report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/pages/review_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/pages/sorting_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1383">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1171,106 +1178,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/pymongo/periodic_executor.py">
+    <entry file="file://$PROJECT_DIR$/model/testCase/test_input_deliveryCode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1845">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="127">
+          <caret line="205" column="71" selection-start-line="205" selection-start-column="71" selection-end-line="205" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/pages/sorting_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/pages/review_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/testCase/test_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report/201807311042Report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runCase/run_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runCase/run_inputOrder.py">
+    <entry file="file://$PROJECT_DIR$/model/pages/inputBill_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <caret line="13" column="79" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/testCase/test_inputOrder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
           <folding>
-            <element signature="e#15#52#0" expanded="true" />
-            <marker date="1533005392000" expanded="true" signature="307:710" ph="..." />
+            <element signature="e#14#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report/201807311052Report.html">
+    <entry file="file://$PROJECT_DIR$/model/testCase/test_input_distributeService.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="66">
+          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="886" column="0" selection-start-line="886" selection-start-column="0" selection-end-line="886" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="328" column="17" selection-start-line="328" selection-start-column="17" selection-end-line="328" selection-end-column="17" />
+        <state relative-caret-position="122">
+          <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/pymongo/periodic_executor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/mylog.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="511" column="35" selection-start-line="511" selection-start-column="35" selection-end-line="511" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/pages/getCargo_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1833">
-          <caret line="196" column="21" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/pages/inputBill_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3420">
-          <caret line="246" column="30" selection-start-line="246" selection-start-column="30" selection-end-line="246" selection-end-column="30" />
+        <state relative-caret-position="141">
+          <caret line="143" column="8" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
           <folding>
-            <element signature="e#3843#4150#1" expanded="false" />
+            <element signature="e#15#58#0" expanded="true" />
+            <element signature="e#6872#7038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/testCase/test_inputOrder.py">
+    <entry file="file://$PROJECT_DIR$/data/api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="81" column="60" selection-start-line="81" selection-start-column="60" selection-end-line="81" selection-end-column="60" />
+        <state relative-caret-position="120">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/testCase/test_getCargo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="79" column="39" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
           <folding>
             <element signature="e#15#30#0" expanded="true" />
-            <element signature="e#875#1350#0" expanded="false" />
+            <element signature="e#840#1315#0" expanded="false" />
+            <element signature="e#1382#2097#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -64,7 +64,30 @@ class get_cargo(unittest.TestCase):
     #   运费计算检查
     def test_freight_caculate(self):
         self.Login()
+        self.gc.enter(self.driver)
+        self.waybillNo = time.strftime("%Y%m%d%H%M%S", time.localtime())
+        product = random.randint(0, 19)
+        cargo = random.randint(0, 3)
+        weight = str(random.uniform(0, 50))
 
+        self.gc.enter(self.driver)
+        self.gc.cus_name_enter(self.driver, self.cusName)
+        self.gc.cus_code_enter(self.driver, self.cusCode)
+        self.gc.waybillNo_enter(self.driver, self.waybillNo)
+        self.gc.product_select(self.driver, product)
+        self.gc.cargotype_select(self.driver, cargo)
+        self.gc.weight_write(self.driver, weight)
+        self.gc.save_click(self.driver)
+        if EC.alert_is_present()(self.driver):
+            print u'收货未保存成功,测试停止'
+            self.mylog.info(u'收货未保存成功,测试停止')
+            self.driver.quit()
+        else:
+            print u'收货成功'
+            if self.gc.freight_caculate(self.waybillNo):
+                self.mylog.info(self.waybillNo + u'运费计算正确')
+            else:
+                self.mylog.error(self.waybillNo + u'运费计算错误')
 
     def tearDown(self):
         self.driver.close()
