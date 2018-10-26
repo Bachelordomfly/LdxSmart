@@ -34,7 +34,7 @@ class get_cargo(unittest.TestCase):
             assert self.title in self.driver.title, u'title not same'
         except Exception as e:
             self.mylog.error(u'未能正确打开页面:' + self.url)
-            print e
+            print(e)
         self.login_page.input_name(self.name)
         self.login_page.input_passwd(self.passwd)
         self.login_page.click_submit()
@@ -79,11 +79,11 @@ class get_cargo(unittest.TestCase):
         self.gc.weight_write(self.driver, weight)
         self.gc.save_click(self.driver)
         if EC.alert_is_present()(self.driver):
-            print u'收货未保存成功,测试停止'
+            print(u'收货未保存成功,测试停止')
             self.mylog.info(u'收货未保存成功,测试停止')
             self.driver.quit()
         else:
-            print u'收货成功'
+            print(u'收货成功')
             if self.gc.freight_caculate(self.waybillNo):
                 self.mylog.info(self.waybillNo + u'运费计算正确')
             else:

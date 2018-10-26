@@ -9,7 +9,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from pymongo import MongoClient
 import math
 
-class getCargo():
+class getCargo:
     # 定位器
     customerCode_loc = (By.ID, 'be9c632f-c631-4987-8d6b-0470100349e1')
     customerName_loc = (By.XPATH, '//*[@id="fba0128d-2891-4ae9-9a94-af626174983c"]')
@@ -47,12 +47,12 @@ class getCargo():
         try:
             driver.find_element(*self.menu1_loc).click()
         except Exception as e:
-            print e
+            print(e)
         time.sleep(3)
         try:
             driver.find_element(*self.menu2_loc).click()
         except Exception as e:
-            print e
+            print(e)
         time.sleep(3)
 
     #   输入客户代码回车
@@ -62,7 +62,7 @@ class getCargo():
             driver.find_element(*self.customerCode_loc).send_keys(cus_code)
             time.sleep(2)
         except Exception as e:
-            print e
+            print(e)
         driver.find_element(*self.customerCode_loc).send_keys(Keys.ENTER)
         time.sleep(2)
 
@@ -72,7 +72,7 @@ class getCargo():
             driver.find_element(*self.customerName_loc).clear()
             driver.find_element(*self.customerName_loc).send_keys(cus_name)
         except Exception as ms:
-            print ms
+            print(ms)
         time.sleep(2)
         driver.find_element(*self.customerName_loc).send_keys(Keys.ENTER)
         time.sleep(2)
@@ -88,14 +88,14 @@ class getCargo():
             time.sleep(3)
             select.Select(driver.find_element(*self.customerTip_loc)).select_by_index(0)
         except:
-            print '客户列表未出现'
+            print('客户列表未出现')
 
     #   选择产品
     def product_select(self, driver, index):
         try:
             select.Select(driver.find_element(*self.product_loc)).select_by_index(index)
         except Exception as e:
-            print e
+            print(e)
         time.sleep(2)
 
     #   选择货物类型
@@ -103,7 +103,7 @@ class getCargo():
         try:
             select.Select(driver.find_element(*self.cargoType_loc)).select_by_index(index)
         except Exception as e:
-            print e
+            print(e)
         time.sleep(2)
 
     #   选择航空服务
@@ -111,16 +111,16 @@ class getCargo():
         try:
             select.Select(driver.find_element(*self.flightService_loc)).select_by_visible_text(service)
         except Exception as e:
-            print e
+            print(e)
         time.sleep(2)
 
     #   输入单号回车
     def waybillNo_enter(self,driver, waybillNo):
         try:
             driver.find_element(*self.waybillNo_loc).send_keys(waybillNo)
-            print "yes"
+            print("yes")
         except Exception as e:
-            print e
+            print(e)
         driver.find_element(*self.waybillNo_loc).send_keys(Keys.ENTER)
         time.sleep(2)
 
@@ -130,7 +130,7 @@ class getCargo():
             driver.find_element(*self.pieces_loc).clear()
             driver.find_element(*self.pieces_loc).send_keys(pieces)
         except Exception as e:
-            print e
+            print(e)
         driver.find_element(*self.pieces_loc).send_keys(Keys.ENTER)
         time.sleep(2)
 
@@ -139,7 +139,7 @@ class getCargo():
         try:
             driver.find_element(*self.remark_loc).send_keys(remark)
         except Exception as e:
-            print e
+            print(e)
         time.sleep(2)
 
     #   输入子单重量
@@ -148,7 +148,7 @@ class getCargo():
             driver.find_element(*self.weight_loc).clear()
             driver.find_element(*self.weight_loc).send_keys(weight)
         except Exception as e:
-            print e
+            print(e)
         time.sleep(2)
 
     #   点击保存
@@ -156,7 +156,7 @@ class getCargo():
         try:
             driver.find_element(*self.save_loc).click()
         except Exception as e:
-            print e
+            print(e)
         time.sleep(2)
 
     #   判断单号输入框是否为空
@@ -218,7 +218,7 @@ class getCargo():
                 t += 1
             return t
         except Exception as e:
-            print e
+            print(e)
         time.sleep(3)
 
     # 判断是否有运费和燃油附加费的费用配置
@@ -244,13 +244,13 @@ class getCargo():
                 customer_id = self.packageItem.find_one({'waybill_no': waybill})['customer_id']
                 product_id = self.packageItem.find_one({'waybill_no': waybill})['product_id']
             except Exception as e:
-                print e
+                print(e)
             try:
                 #  产品客户有关联,取产品客户关联id
                 product_customer_id = self.productCustomer.find_one({'product_id': product_id,
                                                             'customer_id': customer_id})['_id']
             except Exception as e:
-                print e
+                print(e)
                 #  产品客户无关联,取产品的默认id
                 product_customer_id = self.productCustomer.find_one({'product_id': product_id,
                                                             'customer_id': None})['_id']
@@ -277,7 +277,7 @@ class getCargo():
                     des.append(des_weight['des_weight'])
 
             else:
-                print u'该货物类型无报价,使用产品客户关联默认报价'
+                print(u'该货物类型无报价,使用产品客户关联默认报价')
                 cargo_type = None
                 for ori_weight in self.freightInfo.find({'productCustomer_id': product_customer_id}):
                     ori.append(ori_weight['ori_weight'])
@@ -303,7 +303,7 @@ class getCargo():
                                                               'account_type': 1, 'cargo_type': cargo_type})['des_weight']  # 首重
                             continue_weight = account_weight - first_weight
                         except Exception as e:
-                            print e
+                            print(e)
 
                         if account_type == 1:  # 首重
                             if first_fee == freight:
@@ -348,7 +348,7 @@ class getCargo():
                                 price = self.freightInfo.find_one({'productCustomer_id': product_customer_id, 'account_type': 4,
                                                            'cargo_type': cargo_type})['unit_price']  # 单价
                             except Exception as e:
-                                print e
+                                print(e)
                             all_fee = weight * price
                             if all_fee == freight:
                                 return True
@@ -365,15 +365,15 @@ class getCargo():
                                 return False
 
                     else:
-                        print weight
+                        print(weight)
             else:
-                print u'无报价'
+                print(u'无报价')
                 if freight == 0:
                     return True
                 else:
                     return False
         else:
-            print u'该站点无运费的费用配置'
+            print(u'该站点无运费的费用配置')
             if freight == 0:
                 return True
             else:
@@ -398,7 +398,7 @@ class getCargo():
                 product_customer_id = self.productCustomer.find_one({'product_id': product_id,
                                                             'customer_id': customer_id})['_id']
             except Exception as e:
-                print e
+                print(e)
                 #  产品客户无关联,取产品的默认id
                 product_customer_id = self.productCustomer.find_one({'product_id': product_id,
                                                             'customer_id': None})['_id']
@@ -414,7 +414,7 @@ class getCargo():
                     else:
                         return False
                 else:
-                    print u'产品客户关联表中无燃油附加费率,查找产品表的默认燃油费率'
+                    print(u'产品客户关联表中无燃油附加费率,查找产品表的默认燃油费率')
                     fuel_surcharge_ratio = self.productInfo.find_one({'_id': product_customer_id})['fuel_surcharge_ratio']  # 获取燃油费率
                     if not fuel_surcharge:
                         freight = self.charging.find_one({'account_id': account_id, 'item': '运费'})['fee']  # 获取当前运费
@@ -430,10 +430,10 @@ class getCargo():
                         else:
                             return False
             except Exception as e:
-                print e
+                print(e)
 
         else:
-            print u'该站点无燃油附加费的费用配置'
+            print(u'该站点无燃油附加费的费用配置')
             freight = self.charging.find_one({'account_id': account_id, 'item': '运费'})['fee']  # 获取当前运费
             correct_fuel_surcharge = None
             if fuel_surcharge == correct_fuel_surcharge:
