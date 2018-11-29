@@ -219,4 +219,4 @@ class caculate_func:
             return 0
 
     #   重新计算内部运费
-    def internal_freight_caculate(self, waybill):
+    # def internal_freight_caculate(self, waybill):
